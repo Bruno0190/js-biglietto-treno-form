@@ -18,21 +18,26 @@
         </div>
 
         <div class="card bg-white text-danger p-3">
-            <form id="form">
+            <form id="user-form">
                 <div class="row text-center">
                     <div class="col-4">
                         <label for="name" class="form-label">Nome e cognome</label>
-                        <input id ="name" class="form-control" type="text">
+                        <input id="name" class="form-control text-center" type="text">
                     </div>
                     <div class="col-4">
                         <label for="km" class="form-label">Km da percorrere</label>
-                        <input id ="km" class="form-control"type="number">
+                        <input id="km" class="form-control text-center" type="number" min="3" max="3000">
                     </div>
                     <div class="col-4">
-                        <label for="age" class="form-label">Fascia d'età</label><select id="age" id ="age" class="form-control"></select>
+                        <label for="age" class="form-label">Fascia d'età</label>
+                        <select id="age" id="age"
+                            class="form-control text-center">                            <option value="minorenne">1-17</option>
+                            <option value="adulto">18-64</option>
+                            <option value="anziano">over-65</option></select>
+
                     </div>
                     <div class="col-12 p-3">
-                        <button type="button" class="btn btn-secondary">Calcola biglietto</button>
+                        <button type="submit" class="btn btn-secondary">Calcola biglietto</button>
 
                     </div>
                 </div>
@@ -45,17 +50,26 @@
         </div>
 
 
-        <div class="p-2">
-            <h2 class="col-12 fs-2 text-center">IL TUO BIGLIETTO</h2>
+        <div class="p-2 text">
+            <h2 class="col-12 fs-2 text-center ">IL TUO BIGLIETTO</h2>
         </div>
-        <div id ="ticket" class="card text-center p-2">
-            <div class="col-12">          
-                <h3 class="col-12 fs-4 text-start">DETTAGLIO PASSEGGERO</h3>
+        <div id="ticket" class="card text-center p-2 text-danger d-none">
+            <div class="col-12">
+                <h3 class="col-12 fs-4 text-start p-2">DETTAGLIO PASSEGGERO</h3>
             </div>
             <div class="row">
-                <div class="col-4"> Nome Passeggero</div>
-                <div class="col-4">Offerta</div>
-                <div class="col-4">Costo bigliettol</div>
+                <div class="col-4">
+                    <h3 class="fs-5">Nome Passeggero</h3>
+                    <h3 id ="guest" class="fs-5 text-dark text-center"></h3>
+                </div>
+                <div class="col-4">
+                    <h3 class="fs-5">Offerta</h3>
+                    <h3 id ="offer" class="fs-5 text-dark text-center"></h3>
+                </div>
+                <div class="col-4">
+                    <h3 class="fs-5">Costo biglietto</h3>
+                    <h3 id ="cost" class="fs-5 text-dark text-center"></h3>
+                </div>
             </div>
         </div>
 
