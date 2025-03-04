@@ -36,6 +36,8 @@ function trainTicket(event) {
     resultName.innerText = name;
     resultOffer.innerText = resultOfferValue;
     resultCost.innerText = (cost - discount).toFixed(2) + "€";
+
+    userForm.reset();
     
 
 }
